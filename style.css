@@ -1,0 +1,156 @@
+@font-face {
+    font-family: Netflix;
+    src: url(NetflixSansRegular.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family:  Netflix;
+}
+body {
+    background-color: rgb(205, 221, 232);
+    
+}
+nav {
+    background-color: yellow;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.text {
+    font-size: 24px;
+    color: blue;
+    margin-left: 20px;
+}
+.contact {
+    font-size: 24px;
+    color: blue;
+    text-decoration: none;
+    margin-right: 20px;
+   
+}
+h1{
+    text-align: center;
+    font-size: 24px;
+    color: blue;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+h4{
+    margin-left: 20px;
+    color: blue;
+    font-size: 25px;
+}
+.intro {
+    background-color: #fff;
+    width: 90%;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+.intro  img {
+    float: left;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+.intro p {
+    font-size: 20px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+.slideshow {
+    margin-left: 100px;
+}
+.slideshow .slideshow-item .home-pics {
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.slideshow {
+    width: 90%;
+    height: 87vh;
+    position: relative;
+    overflow: hidden;
+}
+.slideshow-item {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleImages 51s infinite;
+}
+
+.slideshow-item img {
+    object-fit: cover;
+    object-position: center;
+    animation: zoom 51s infinite;
+}
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+    animation-delay: 0s;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img  {
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img  {
+    animation-delay: 20s;
+}
+.slideshow-item:nth-child(4),
+.slideshow-item:nth-child(4) img  {
+    animation-delay: 30s;
+}
+.slideshow-item:nth-child(5),
+.slideshow-item:nth-child(5) img  {
+    animation-delay: 40s;
+}
+.slideshow-item-text {
+    max-width: 50%;
+    position: absolute;
+    bottom: 2%;
+    left: 20%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    background-color: rgba(10, 7, 21, 0.5);
+    color: #fff;
+    padding: 10px 10px;
+    font-family: Exo;
+}
+.slideshow-item-text h5 {
+    font-size: 24px;
+    font-family: Exo;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+
+}
+.slideshow-item-text p {
+    font-size: 13px;
+    font-family: Exo;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 400;
+}
+@keyframes cycleImages {
+    20%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+        
+    }
+}
+@keyframes zoom {
+    100%{
+        transform: scale(1.3);
+        
+    }
+    
+}
+
